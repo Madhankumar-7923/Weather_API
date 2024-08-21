@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Reporter</title>
+
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="images/weather-icon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css"
+        integrity="sha512-r/Gan7PMSRovDus++vDS2Ayutc/cSdl268u047n4z+k7GYuR7Hiw71FsT3QQxdKJBVHYttOJ6IGLnlM9IoMToQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="main-content">
+
+        <header> <%- include('partials/header.ejs') %> </header>
+
+        <article class="widget">
+
+            <form class="weatherLocation">
+                <input type="text" class="input-field" placeholder="Enter City Name" autofocus autocomplete="off"
+                    required>
+                <button class="search-button">Search</button>
+            </form>
+
+            <div class="icon-and-weatherInfo">
+
+                <div class="weatherIcon">
+                    <i class="main-icon"></i>
+                </div>
+
+                <div class="weatherInfo">
+                    <div class="temperature"> <span></span> </div>
+                    <div class="weatherCondition"></div>
+                </div>
+
+            </div>
+
+            <div class="place"></div>
+
+            <div class="date"></div>
+
+            <div class="extraData">
+
+                <div class="wind_div">
+                    <i class="wi_in"></i>
+                    <span class="wind"></span>
+                </div>
+
+                <div class="sunrise_div">
+                    <i class="sn_in"></i>
+                    <span class="sunrise"></span>
+                </div>
+
+            </div>
+
+            <div class="end_button">
+                <button class="reset_button">Reset</button>
+            </div>
+
+        </article>
+
+    </div>
+
+    <script type="text/javascript" src="js/function.js"></script>
+
+</body>
+
+</html>
